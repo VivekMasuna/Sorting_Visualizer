@@ -1,0 +1,29 @@
+body {
+    background-color: black;
+    font-family: "Catamaran", sans-serif;
+    color: white;
+    margin: 2% 20%;
+}
+
+h2 {
+    color: rgb(7, 197, 7);
+}
+
+img {
+    height: 250px;
+    margin: 5px;
+}
+
+span {
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+#image {
+    height: 50px;
+}
+
+#imagems {
+    height: 350px;
+    width: 90%;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Sort</title>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h2>Quick Sort</h2>
+    <p>QuickSort is a sorting algorithm based on the Divide and Conquer algorithm that picks an element as a pivot and partitions the given array around the picked pivot by placing the pivot in its correct position in the sorted array.</p>
+    <h2>How does Quick Sort work?</h2>
+    <p>
+        The key process in quickSort is a partition(). The target of partitions is to place the pivot (any element can be chosen to be a pivot) at its correct position in the sorted array and put all smaller elements to the left of the pivot, and all greater elements to the right of the pivot.
+        <br>
+        Partition is done recursively on each side of the pivot after the pivot is placed in its correct position and this finally sorts the array.
+        <br>
+        <img id="imagems" src="qs1.png" alt="#">
+    </p>
+    <p>
+        <span>Choice of Pivot:</span> <br>
+        There are many different choices for picking pivots.
+        <ul>
+            <li>Always pick the first element as a pivot.</li>
+            <li>Always pick the last element as a pivot.</li>
+            <li>Pick a random element as a pivot.</li>
+            <li>Pick the middle as the pivot.</li>
+        </ul>
+        <span>Partition Algorithm:</span> <br>
+        The logic is simple, we start from the leftmost element and keep track of the index of smaller (or equal) elements as i. While traversing, if we find a smaller element, we swap the current element with arr[i]. Otherwise, we ignore the current element.
+    </p>
+    <h2>Quick Sort Algorithm</h2>
+    <p>
+        Consider: arr[] = {10, 80, 30, 90, 40}.
+        <ul>
+            <li>Compare 10 with the pivot and as it is less than pivot arrange it accordingly.</li>
+            <img src="qs2.webp" alt="#">
+            <li>Compare 80 with the pivot. It is greater than pivot.</li>
+            <img src="qs3.webp" alt="#">
+            <li>Compare 30 with pivot. It is less than pivot so arrange it accordingly.</li>
+            <img src="qs4.webp" alt="#">
+            <li>Compare 90 with the pivot. It is greater than the pivot.</li>
+            <img src="qs5.webp" alt="#">
+            <li>Arrange the pivot in its correct position.</li>
+            <img src="qs6.webp" alt="#">
+        </ul>
+    </p>
+    <h2>Illustration of Quicksort</h2>
+    <p>
+        As the partition process is done recursively, it keeps on putting the pivot in its actual position in the sorted array. Repeatedly putting pivots in their actual position makes the array sorted.
+        <br>
+        Follow the below images to understand how the recursive implementation of the partition algorithm helps to sort the array.
+        <br>
+        <ul>
+            <li>Initial partition on the main array: </li>
+            <img src="qs7.webp" alt="#">
+            <li>Partitioning of the subarrays:</li>
+            <img src="qs8.webp" alt="#">
+        </ul>
+    </p>
+    <h2>Complexity Analysis of Quick Sort</h2>
+    <p>
+        <span>Time Complexity: </span>
+        <ul>
+            <li><span>Best Case: Ω (n log (n))</span> <br> The best-case scenario for quicksort occur when the pivot chosen at the each step divides the array into roughly equal halves. <br> In this case, the algorithm will make balanced partitions, leading to efficient Sorting.</li>
+            <li><span>Average Case: θ (n log (n))</span> <br> Quicksort's average-case performance is usually very good in practice, making it one of the fastest sorting Algorithm.</li>
+            <li><span>Worst Case: O(n^2)</span> <br> The worst-case Scenario for Quicksort occur when the pivot at each step consistently results in highly unbalanced partitions. When the array is already sorted and the pivot is always chosen as the smallest or largest element. To mitigate the worst-case Scenario, various techniques are used such as choosing a good pivot (e.g., median of three) and using Randomized algorithm (Randomized Quicksort ) to shuffle the element before sorting.</li>
+        </ul>
+        <span>Auxiliary Space: O(1)</span> <br>
+        If we don't consider the recursive stack space. If we consider the recursive stack space then, in the worst case quicksort could make O(n).
+    </p>
+    <h2>Advantages of Quick Sort</h2>
+    <ul>
+        <li>It is a divide-and-conquer algorithm that makes it easier to solve problems.</li>
+        <li>It is efficient on large data sets.</li>
+        <li>It has a low overhead, as it only requires a small amount of memory to function.</li>
+    </ul>
+    <h2>Disadvantages of Quick Sort</h2>
+    <ul>
+        <li>It has a worst-case time complexity of O(N2), which occurs when the pivot is chosen poorly.</li>
+        <li>It is not a good choice for small data sets.</li>
+        <li>It is not a stable sort, meaning that if two elements have the same key, their relative order will not be preserved in the sorted output in case of quick sort, because here we are swapping elements according to the pivot's position (without considering their original positions).</li>
+    </ul>
+</body>
+</html>

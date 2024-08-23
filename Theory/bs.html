@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Sort</title>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h2>Bubble Sort</h1>
+    <p>Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in the wrong order. This algorithm is not suitable for large data sets as its average and worst-case time complexity is quite high.</p>
+    <h2>Bubble Sort Algorithm</h2>
+    <p>In this algorithm, </p>
+    <ul>
+        <li>traverse from left and compare adjacent elements and the higher one is placed at right side.</li>
+        <li>In this way, the largest element is moved to the rightmost end at first.</li>
+        <li>This process is then continued to find the second largest and place it and so on until the data is sorted.</li>
+    </ul>
+    <h2>How does Bubble Sort Work?</h2>
+    <p>Let us understand the working of bubble sort with the help of the following illustration: </p>
+    <p>
+        <span>Input: </span> arr[] = {6, 3, 0, 5}
+        <br>
+        <span>First Pass: </span> The largest element is placed in its correct position, i.e., the end of the array.
+        <img src="photo2.webp" alt="#">
+        <br>
+        <span>Second Pass: </span> Place the second largest element at correct position
+        <img src="photo3.webp" alt="#">
+        <br>
+        <span>Third Pass: </span> Place the remaining two elements at their correct positions.
+        <img src="photo4.webp" alt="#">
+    </p>
+    <ul>
+        <li><span>Total no. of passes: </span> n-1</li>
+        <li><span>Total no. of comparisons: </span> n*(n-1)/2</li>
+    </ul>
+    <h2>Complexity Analysis of Bubble Sort</h2>
+    <p>
+        <span>Time Complexity: </span> O(n^2)
+        <br>
+        <span>Auxiliary Space: </span> O(1)
+    </p>
+    <h2>Advantages of Bubble Sort</h2>
+    <ul>
+        <li>Bubble sort is easy to understand and implement.</li>
+        <li>It does not require any additional memory space.</li>
+        <li>It is a stable sorting algorithm, meaning that elements with the same key value maintain their relative order in the sorted output.</li>
+    </ul>
+    <h2>Disadvantages of Bubble Sort</h2>
+    <ul>
+        <li>Bubble sort has a time complexity of O(N2) which makes it very slow for large data sets.</li>
+        <li>Bubble sort is a comparison-based sorting algorithm, which means that it requires a comparison operator to determine the relative order of elements in the input data set. It can limit the efficiency of the algorithm in certain cases.</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selection Sort</title>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h2>Selection Sort</h2>
+    <p>Selection sort is a simple and efficient sorting algorithm that works by repeatedly selecting the smallest (or largest) element from the unsorted portion of the list and moving it to the sorted portion of the list.</p>
+    <p>The algorithm repeatedly selects the smallest (or largest) element from the unsorted portion of the list and swaps it with the first element of the unsorted part. This process is repeated for the remaining unsorted portion until the entire list is sorted.</p>
+    <h2>Selection Sort Algorithm</h2>
+    <p>Lets consider the following array as an example: arr[] = {64, 25, 12, 22, 11}</p>
+    <p>
+        <span>First pass: </span>
+        <ul>
+            <li>For the first position in the sorted array, the whole array is traversed from index 0 to 4 sequentially. The first position where 64 is stored presently, after traversing whole array it is clear that 11 is the lowest value.</li>
+            <li>Thus, replace 64 with 11. After one iteration 11, which happens to be the least value in the array, tends to appear in the first position of the sorted list.</li>
+        </ul>
+        <img src="photo5.webp" alt="#">
+        <br>
+        <span>Second pass: </span>
+        <ul>
+            <li>For the second position, where 25 is present, again traverse the rest of the array in a sequential manner.</li>
+            <li>After traversing, we found that 12 is the second lowest value in the array and it should appear at the second place in the array, thus swap these values.</li>
+        </ul>
+        <img src="photo6.webp" alt="#">
+        <br>
+        <span>Third pass: </span>
+        <ul>
+            <li>Now, for third place, where 25 is present again traverse the rest of the array and find the third least value present in the array.</li>
+            <li>While traversing, 22 came out to be the third least value and it should appear at the third place in the array, thus swap 22 with element present at third position.</li>
+        </ul>
+        <img src="photo7.webp" alt="#">
+        <br>
+        <span>Fourth pass: </span>
+        <ul>
+            <li>Similarly, for fourth position traverse the rest of the array and find the fourth least element in the array</li>
+            <li>As 25 is the 4th lowest value hence, it will place at the fourth position.</li>
+        </ul>
+        <img src="photo8.webp" alt="#">
+        <br>
+        <span>Fifth pass: </span>
+        <ul>
+            <li>At last the largest value present in the array automatically get placed at the last position in the array</li>
+            <li>The resulted array is the sorted array.</li>
+        </ul>
+        <img src="photo9.webp" alt="#">
+        <br>
+    </p>
+    <h2>Complexity Analysis of Selection Sort</h2>
+    <p>
+        <span>Time Complexity:</span>The time complexity of Selection Sort is O(n^2) as there are two nested loops:
+        <ul>
+            <li>One loop to select an element of Array one by one = O(n)</li>
+            <li>Another loop to compare that element with every other Array element = O(n)</li>
+            <li>Therefore overall complexity = O(n) * O(n) = O(n*n) = O(n^2)</li>
+        </ul>
+        <span>Auxiliary Space:</span> O(1) as the only extra memory used is for temporary variables while swapping two values in Array. The selection sort never makes more than O(N) swaps and can be useful when memory writing is costly. 
+    </p>
+    <h2>Advantages of Selection Sort</h2>
+    <ul>
+        <li>Simple and easy to understand.</li>
+        <li>Works well with small datasets.</li>
+    </ul>
+    <h2>Disadvantages of Selection Sort</h2>
+    <ul>
+        <li>Selection sort has a time complexity of O(n^2) in the worst and average case.</li>
+        <li>Does not work well on large datasets.</li>
+        <li>Does not preserve the relative order of items with equal keys which means it is not stable.</li>
+    </ul>
+</body>
+</html>

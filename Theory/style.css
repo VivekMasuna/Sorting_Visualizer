@@ -1,0 +1,39 @@
+body {
+    background-color: black;
+    font-family: "Catamaran", sans-serif;
+    color: #ccc;
+}
+
+h1 {
+    color: rgb(7, 197, 7);
+}
+
+.main {
+    text-align: center;
+    margin: 0 15%;
+}
+
+.main img {
+    height: 300px;
+    margin: 1%;
+}
+
+.algo {
+    margin: 0 15%;
+}
+
+ul a {
+    text-decoration: none;
+    margin: 5px;
+    color: rgb(7, 197, 7);
+}
+
+ul a:hover {
+    color: #ccc;
+    text-decoration: underline;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+}

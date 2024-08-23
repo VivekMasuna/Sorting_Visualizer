@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertion Sort</title>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h2>Insertion Sort</h2>
+    <p>Insertion sort is a simple sorting algorithm that works similar to the way you sort playing cards in your hands. The array is virtually split into a sorted and an unsorted part. Values from the unsorted part are picked and placed at the correct position in the sorted part.</p>
+    <h2>Insertion Sort Algorithm</h2>
+    <p>To sort an array of size N in ascending order iterate over the array and compare the current element (key) to its predecessor, if the key element is smaller than its predecessor, compare it to the elements before. Move the greater elements one position up to make space for the swapped element.</p>
+    <p>
+        Consider an example: <br>
+        arr[]: {12, 11, 13, 5, 6} <br>
+        <img id="image" src="/Theory/img/1.png" alt="#"> <br>
+        <span>First Pass: </span>
+        <ul>
+            <li>Initially, the first two elements of the array are compared in insertion sort.</li>
+            <img id="image" src="/Theory/img/2.png" alt="#">
+            <li>Here, 12 is greater than 11 hence they are not in the ascending order and 12 is not at its correct position. Thus, swap 11 and 12.</li>
+            <li>So, for now 11 is stored in a sorted sub-array.</li>
+            <img id="image" src="/Theory/img/3.png" alt="#">
+        </ul>
+        <span>Second Pass: </span>
+        <ul>
+            <li>Now, move to the next two elements and compare them</li>
+            <img id="image" src="/Theory/img/4.png" alt="#">
+            <li>Here, 13 is greater than 12, thus both elements seems to be in ascending order, hence, no swapping will occur. 12 also stored in a sorted sub-array along with 11</li>
+        </ul>
+        <span>Third Pass: </span>
+        <ul>
+            <li>Now, two elements are present in the sorted sub-array which are 11 and 12</li>
+            <li>Moving forward to the next two elements which are 13 and 5</li>
+            <img id="image" src="/Theory/img/5.png" alt="#">
+            <li>Both 5 and 13 are not present at their correct place so swap them</li>
+            <img id="image" src="/Theory/img/6.png" alt="#">
+            <li>After swapping, elements 12 and 5 are not sorted, thus swap again</li>
+            <img id="image" src="/Theory/img/7.png" alt="#">
+            <li>Here, again 11 and 5 are not sorted, hence swap again</li>
+            <img id="image" src="/Theory/img/8.png" alt="#">
+            <li>Here, 5 is at its correct position</li>
+        </ul>
+        <span>Fourth Pass: </span>
+        <ul>
+            <li>Now, the elements which are present in the sorted sub-array are 5, 11 and 12</li>
+            <li>Moving to the next two elements 13 and 6</li>
+            <img id="image" src="/Theory/img/9.png" alt="#">
+            <li>Clearly, they are not sorted, thus perform swap between both</li>
+            <img id="image" src="/Theory/img/10.png" alt="#">
+            <li>Now, 6 is smaller than 12, hence, swap again</li>
+            <img id="image" src="/Theory/img/11.png" alt="#">
+            <li>Here, also swapping makes 11 and 6 unsorted hence, swap again</li>
+            <img id="image" src="/Theory/img/12.png" alt="#">
+            <li>Finally, the array is completely sorted.</li>
+        </ul>
+    </p>
+    <h2>Complexity Analysis of Insertion Sort</h2>
+    <p>
+        <span>Time Complexity: O(n^2)</span>
+        <ul>
+            <li>The worst-case time complexity of the Insertion sort is O(n^2)</li>
+            <li>The average case time complexity of the Insertion sort is O(n^2)</li>
+            <li>The time complexity of the best case is O(n)</li>
+        </ul>
+        <span>Space Complexity: O(1)</span>
+        <ul>
+            <li>The auxiliary space complexity of Insertion Sort is O(1)</li>
+        </ul>
+    </p>
+    <h2>Characteristics of Insertion Sort</h2>
+    <ul>
+        <li>This algorithm is one of the simplest algorithms with a simple implementation</li>
+        <li>Basically, Insertion sort is efficient for small data values</li>
+        <li>Insertion sort is adaptive in nature, i.e. it is appropriate for data sets that are already partially sorted.</li>
+    </ul>
+</body>
+</html>
